@@ -1,0 +1,78 @@
+# General Ack Settings
+####################################################################
+
+# only search with case sensitivity if there is mixed case
+--smart-case
+# follow symlinks
+--follow
+--color
+
+# Ack Type Settings
+####################################################################
+
+# add some more zope files to the plone type
+--type-add=plone=.zcml,.props,.dtml,.vpy,.kss
+--type-add=python=.cpy,.vpy,.plt
+# add specific type for page templates
+--type-set=zpt=.pt,.cpt
+# add .cfg for buildout files
+--type-set=buildout=.cfg
+# add a specific type for ZCML files
+--type-set=zcml=.zcml
+# add markdown, textile, and reStructuredText
+--type-set=plaintext=.md,.mdown,.markdown,.mkdn,.textile,.rst,.txt
+# plain text CSV files
+--type-set=csv=.txt,.csv,.tsv
+# add in a type for gettext messages
+--type-set=gettext=.pot,.po
+
+--type-add=cpp=.mm,.inl
+--type-add=html=.slim,.html.erb,.html.haml,.hamlc,.jade
+--type-set=haml=.haml
+--type-add=css=.scss,.sass,.less,.styl,.ccss,.pcss
+--type-add=js=.jsx,.jake
+--type-set=coffeescript=.coffee
+--type-set=mustache=.mustache,.mu,.handlebars,.hbs,.hbars
+--type-set=json=.json
+--type-add=ruby=.rsel,.builder,.thor
+--type-set=rdoc=.rdoc
+--type-set=cucumber=.feature
+--type-set=gemspec=.gemspec
+--type-set=walrus=.tmpl
+--type-set=gem=Gemfile,Gemfile.lock
+--type-set=capistrano=Capfile,capfile
+
+--type-set=tandem=.td
+--type-set=protobuf=.proto
+--type-set=eiffel=.e,.eiffel
+--type-set=ragel=.rl
+--type-add=vim=vimrc
+--type-set=cuda=.cu,.cuh,.gpu,.ptx,.cubin
+--type-set=factor=.factor
+--type-set=puppet=.pp
+--type-set=qml=.qml
+--type-set=racket=.rkt,.rtkl,.scrbl
+--type-set=vala=.vala,.vapi
+--type-set=perl6=.pl6,.pm6,.p6
+--type-set=sml=.sml
+--type-set=rust=.rs
+--type-set=dart=.dart
+--type-set=r=.r
+
+--type-set=lex=.l
+--type-set=yacc=.y
+--type-set=antlr=.g
+
+--type-add=objc=.pch
+--type-set=xcode=.pbxproj,.pbxuser,.perspectivev3
+--type-set=nib=.xib
+--type-set=plist=.plist
+--type-set=tmstuff=.tmproj,.tm_build_errors
+--type-set=ignorables=.log,.tmp,.pdf
+
+# types to ignore by default
+--nogettext
+--noignorables
+--nonib
+--notmstuff
+--noxcode
