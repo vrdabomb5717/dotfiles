@@ -1,0 +1,48 @@
+alias ccl='ccl64'
+alias lisp='ccl64'
+
+alias ts="date +%s"
+alias quit="exit"
+alias q="exit"
+alias histgrep="history | grep"
+alias sl=ls
+alias mkcd='_(){ mkdir $1; cd $1; }; _'
+alias edit=$EDITOR
+alias ..='cd ..'
+alias cd..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../..'
+alias grep="grep --color=auto"
+alias less="less -MR"
+
+alias ls='ls -G'
+alias ll='ls -l'
+alias la='ls -A -l'
+alias lx='ls -lXB'         # sort by extension
+alias lk='ls -lSr'         # sort by size, biggest last
+alias lc='ls -ltcr'        # sort by and show change time, most recent last
+alias lu='ls -ltur'        # sort by and show access time, most recent last
+alias lt='ls -ltr'         # sort by date, most recent last
+alias lm='ls -al |more'    # pipe through 'more'
+alias lr='ls -lR'          # recursive ls
+alias tree='tree -Csu'     # nice alternative to 'recursive ls'
+alias rm='trash'           # stop using rm; move all deleted files to the trash to be recovered later
+
+# alias hub to git
+eval "$(hub alias -s)"
+
+pipu() {
+    pip install -U `yolk -U | awk '{print $1}' | uniq`
+}
+
+pip3u() {
+    pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip3 install -U
+}
+
+alias ipython='ipython --pylab'
+alias isympy='/usr/local/share/python/isympy'
+alias ipython3='ipython3 --pylab'
+alias sml='rlwrap sml'
+alias ocaml='rlwrap ocaml'
+alias java_home='/usr/libexec/java_home'
+alias fixopenwith='/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user'
