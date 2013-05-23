@@ -1,0 +1,10 @@
+# various additional completions
+# http://www.gnu.org/software/bash/manual/bashref.html#Programmable-Completion-Builtins
+
+# Compression
+complete -f -o default -X '*.+(zip|ZIP)'  zip
+complete -f -o default -X '!*.+(zip|ZIP)' unzip
+complete -f -o default -X '*.+(z|Z)' compress
+complete -f -o default -X '!*.+(z|Z)' uncompress
+complete -f -o default -X '!*.+(gz|GZ)' gunzip
+complete -f -o default -X '!*.+(bz2|BZ2)' bunzip2
