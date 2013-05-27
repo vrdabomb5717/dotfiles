@@ -57,6 +57,8 @@ if [ -f ~/.env ]; then
    source ~/.env
 fi
 
+eval "`pip completion --bash`"
+
 ######################################################################
 
 # create useful functions
